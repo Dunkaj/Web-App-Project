@@ -5,6 +5,9 @@ import t from "../../utils/translate/translate"
 const SideMenu = ({ path }) => {
   return (
     <nav className="ldc-side-menu">
+      <Link to="/admin" data-text={t("admin")}>
+        <div>A</div>
+      </Link>
       <Link
         to="/buy-leads"
         className={path === "/buy-leads" ? "sm-active" : ""}

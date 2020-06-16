@@ -8,7 +8,7 @@ import SideMenu from "Containers/SideMenu"
 import Snackbar from "Containers/Snackbar"
 import { Switch, Route } from "react-router"
 import Home from "Containers/Home"
-import Admin from "Containers/Admin"
+import AppAdmin from "Containers/AppAdmin"
 import MyLeads from "Containers/MyLeads"
 import SellLeads from "Containers/SellLeads"
 import BuyLeads from "Containers/BuyLeads"
@@ -55,6 +55,8 @@ class App extends React.Component {
     return (
       <div>
         {/* <Steps /> */}
+        <Route exact path="/admin" component={AppAdmin} />
+
         <div className="ldc-app">
           <Header />
           {loggedIn && !disabled && <SideMenu path={path} />}
@@ -73,7 +75,7 @@ class App extends React.Component {
               <Route path="/user-settings" component={UserSettings} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route path="/admin" component={Admin} />
+              {/*<Route path="/admin" component={AppAdmin} />*/}
               <Route path="/buy-leads" component={BuyLeads} />
               <Route path="/sell-leads" component={SellLeads} />
               <Route path="/my-leads" component={MyLeads} />

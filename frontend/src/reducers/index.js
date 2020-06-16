@@ -38,6 +38,12 @@ import fieldsSell from "./fieldsSell"
 import fieldsAuction from "./fieldsAuction"
 import auctionBet from "./auctionBet"
 import checkoutAuction from "./checkoutAuction"
+import { adminReducer, i18nReducer, defaultI18nProvider } from "react-admin"
+import { routerReducer } from "react-router-redux"
+import { reducer as formReducer } from "redux-form"
+
+const locale = "en"
+const i18nProvider = defaultI18nProvider
 
 const rootReducer = combineReducers({
   app,
@@ -82,6 +88,10 @@ const rootReducer = combineReducers({
   fieldsAuction,
   auctionBet,
   checkoutAuction,
+  admin: adminReducer,
+  i18n: i18nReducer(locale, i18nProvider(locale)),
+  form: formReducer,
+  router: routerReducer,
 })
 
 export default rootReducer
