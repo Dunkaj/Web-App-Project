@@ -23,7 +23,7 @@ import moveToSell from "./moveToSell"
 import language from "./language"
 import inlinemanual from "./inlinemanual"
 import notifications from "./notifications"
-import googleAnalytics from "./googleanalytics"
+//import googleAnalytics from "./googleanalytics"
 import metamask from "./metamask"
 import notificationsCreate from "./notificationCreate"
 import editWallet from "./walletSettings"
@@ -85,7 +85,7 @@ export default function* rootSaga() {
     metamask,
     inlinemanual,
     notifications,
-    googleAnalytics,
+    // googleAnalytics,
     notificationsCreate,
     editWallet,
     updateUser,
